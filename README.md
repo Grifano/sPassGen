@@ -1,0 +1,2 @@
+# sPassGen
+Simple password generator
