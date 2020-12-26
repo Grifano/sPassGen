@@ -10,32 +10,29 @@
 </head>
 
 <body>
-	<main>
 
-		<h1>Simple Password Generator</h1>
-		<section class="passBody">
-			<nav class="passBody__menu">
-				<form>
-					<label for="passLength">Length</label>
-					<select name="passLength" id="passLength">
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>
-					</select>
-					<label for="passUppercase">Uppercase</label>
-					<input id="passUppercase" type="checkbox"></input>
-					<label for=" passNumbers">Numbers</label>
-					<input id="passNumbers" type="checkbox"></input>
-					<label for="passSymbols">Symbols</label>
-					<input id="passSymbols" type="checkbox"></input>
-				</form>
-			</nav>
-			<p id="password"></p>
-			<button onclick="getPassword()">Get password</button>
-		</section>
+	<h1>Simple<br>Password<br><span>Generator</span></h1>
 
+	<main class="passBody">
+		<nav class="passBody__menu">
+			<form class="passBody__options">
+				<label for="passLength">Length</label>
+				<select name="passLength" id="passLength">
+					<option value="6">6</option>
+					<option value="8">8</option>
+				</select>
+				<label for="passUppercase">Uppercase</label>
+				<input id="passUppercase" type="checkbox"></input>
+				<label for=" passNumbers">Numbers</label>
+				<input id="passNumbers" type="checkbox"></input>
+				<label for="passSymbols">Symbols</label>
+				<input id="passSymbols" type="checkbox"></input>
+			</form>
+		</nav>
+		<p id="password" class="passBody__passOut">Your password</p>
+		<button onclick="getPassword()" class="passBody__btn">Get password</button>
 	</main>
+
 	<script src="js/script.js"></script>
 </body>
 

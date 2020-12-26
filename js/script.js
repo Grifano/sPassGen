@@ -13,22 +13,40 @@ const passDictionary = {
 function getPassword() {
 	var password = "";
 	for (var i = 0; i < passLength.value; i++) {
-		var l = Math.floor(Math.random() * (passDictionary.letters.length - 1));
-		var n = Math.floor(Math.random() * (passDictionary.numbers.length - 1));
-		var s = Math.floor(Math.random() * (passDictionary.symbols.length - 1));
-
-		password = password + passDictionary.letters[l] + passDictionary.numbers[n] + passDictionary.symbols[s];
+		var l = getLetters(passUppercase.checked);
+		var n = getNumber(passNumbers.checked)
+		var s = getSymbol(passSymbols.checked)
+		if (l !== undefined) {
+			password = password + passDictionary.letters[l]
+		}
+		if (n !== undefined) {
+			password = password + passDictionary.numbers[n]
+		}
+		if (s !== undefined) {
+			password = password + passDictionary.symbols[s];
+		}
 	}
 	passOut.innerHTML = password;
-	console.log(getSymbol());
+	console.log(passLength.value)
 };
-function checkingCheckbox(input) {
-	var symState = passSymbols.checked;
+function getSymbol(input) {
 	var out;
-	if (symState === true) {
-		out = "Checked"
-	} else {
-		out = "Not checked"
+	if (input === true) {
+		out = Math.floor(Math.random() * (passDictionary.symbols.length - 1));
+	}
+	return out;
+};
+function getNumber(input) {
+	var out;
+	if (input === true) {
+		out = Math.floor(Math.random() * (passDictionary.numbers.length - 1));
+	}
+	return out;
+};
+function getLetters(input) {
+	var out;
+	if (input === true) {
+		out = Math.floor(Math.random() * (passDictionary.letters.length - 1));
 	}
 	return out;
 };
