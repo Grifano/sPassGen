@@ -29,9 +29,9 @@ function getPassword() {
 		var passArrayIndex = Math.floor(Math.random() * (passArray.length));
 		password = password + passArray[passArrayIndex];
 	}
-	passOut.innerHTML = password;
-	console.log(passLength.value);
-	console.log(passArray);
+	if (passArray.length !== 0) {
+		passOut.innerHTML = password;
+	}
 };
 function getSymbol(input) {
 	var out;
