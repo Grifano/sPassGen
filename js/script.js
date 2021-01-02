@@ -12,22 +12,26 @@ const passDictionary = {
 
 function getPassword() {
 	var password = "";
+	var passArray = [];
 	for (var i = 0; i < passLength.value; i++) {
 		var l = getLetters(passUppercase.checked);
-		var n = getNumber(passNumbers.checked)
-		var s = getSymbol(passSymbols.checked)
+		var n = getNumber(passNumbers.checked);
+		var s = getSymbol(passSymbols.checked);
 		if (l !== undefined) {
-			password = password + passDictionary.letters[l]
-		}
+			passArray.push(passDictionary.letters[l])
+		};
 		if (n !== undefined) {
-			password = password + passDictionary.numbers[n]
-		}
+			passArray.push(passDictionary.numbers[n])
+		};
 		if (s !== undefined) {
-			password = password + passDictionary.symbols[s];
-		}
+			passArray.push(passDictionary.symbols[s])
+		};
+		var passArrayIndex = Math.floor(Math.random() * (passArray.length));
+		password = password + passArray[passArrayIndex];
 	}
 	passOut.innerHTML = password;
-	console.log(passLength.value)
+	console.log(passLength.value);
+	console.log(passArray);
 };
 function getSymbol(input) {
 	var out;
@@ -50,3 +54,16 @@ function getLetters(input) {
 	}
 	return out;
 };
+function copyTo() {
+	if (document.selection) {
+		var range = document.body.createTextRange();
+		range.moveToElementText(document.getElementById("password"));
+		range.select().createTextRange();
+		document.execCommand("copy");
+	} else if (window.getSelection) {
+		var range = document.createRange();
+		range.selectNode(document.getElementById("password"));
+		window.getSelection().addRange(range);
+		document.execCommand("copy");
+	}
+}

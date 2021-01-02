@@ -39,13 +39,16 @@ h1 span {
 .passBody__options select {
 	margin: 0px 0px 20px 0px;
 }
+.passBody__outBody {
+	display: flex;
+	margin: 0px 0px 20px 0px;
+}
 .passBody__passOut {
 	padding: 10px 30px;
 	color: black;
 	background-color: #fff;
 	border-radius: 5px;
 	text-align: center;
-	margin: 0px 0px 20px 0px;
 	border: 2px solid black;
 	border-radius: 5px;
 	box-shadow: inset 0px 0px 5px black;
@@ -55,6 +58,19 @@ h1 span {
 	padding: 10px;
 	color: #fff;
 	background-color: #000;
-	border: 2px solid orange;
+	border: 3px solid orange;
 	border-radius: 5px;
+	cursor: pointer;
+}
+.passBody__btn:hover {
+	background-color: orange;
+	border: 3px solid black;
+	transition: all 0.3s ease 0s;
+}
+.passBody__btn_copyTo {
+	flex: 0 0 auto;
+	margin: 0px 0px 0px 20px;
+	width: 35px;
+	/* height: 35px; */
+	background: url("../img/ftcopy.svg") center no-repeat;
 }

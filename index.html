@@ -20,6 +20,7 @@
 				<select name="passLength" id="passLength">
 					<option value="6">6</option>
 					<option value="8">8</option>
+					<option value="12">12</option>
 				</select>
 				<label for="passUppercase">Uppercase</label>
 				<input id="passUppercase" type="checkbox"></input>
@@ -29,7 +30,10 @@
 				<input id="passSymbols" type="checkbox"></input>
 			</form>
 		</nav>
-		<p id="password" class="passBody__passOut">Your password</p>
+		<div class="passBody__outBody">
+			<p id="password" class="passBody__passOut">Your password</p>
+			<button onclick="copyTo()" class="passBody__btn passBody__btn_copyTo"></button>
+		</div>
 		<button onclick="getPassword()" class="passBody__btn">Get password</button>
 	</main>
 
