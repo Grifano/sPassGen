@@ -11,30 +11,38 @@
 
 <body>
 
-	<h1>Simple<br>Password<br><span>Generator</span></h1>
+	<h1>Simple Password Generator</h1>
 
 	<main class="passBody">
 		<nav class="passBody__menu">
 			<form class="passBody__options">
-				<label for="passLength">Length</label>
-				<select name="passLength" id="passLength">
-					<option value="6">6</option>
-					<option value="8">8</option>
-					<option value="12">12</option>
-				</select>
-				<label for="passUppercase">Uppercase</label>
-				<input id="passUppercase" type="checkbox"></input>
-				<label for=" passNumbers">Numbers</label>
-				<input id="passNumbers" type="checkbox"></input>
-				<label for="passSymbols">Symbols</label>
-				<input id="passSymbols" type="checkbox"></input>
+				<div class="options options__length">
+					<label for="passLength">Length</label>
+					<select name="passLength" id="passLength">
+						<option value="6">6</option>
+						<option value="8">8</option>
+						<option value="12">12</option>
+					</select>
+				</div>
+				<div class="options options__uppercase">
+					<label for="passUppercase">Uppercase</label>
+					<input id="passUppercase" type="checkbox"></input>
+				</div>
+				<div class="options options__numbers">
+					<label for=" passNumbers">Numbers</label>
+					<input id="passNumbers" type="checkbox"></input>
+				</div>
+				<div class="options options__symbols">
+					<label for="passSymbols">Symbols</label>
+					<input id="passSymbols" type="checkbox"></input>
+				</div>
 			</form>
+			<button onclick="getPassword()" class="passBody__btn">Get password</button>
 		</nav>
 		<div class="passBody__outBody">
 			<p id="password" class="passBody__passOut">Your password</p>
 			<button onclick="copyTo()" class="passBody__btn passBody__btn_copyTo"></button>
 		</div>
-		<button onclick="getPassword()" class="passBody__btn">Get password</button>
 	</main>
 
 	<script src="js/script.js"></script>

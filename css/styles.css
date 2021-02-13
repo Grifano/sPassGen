@@ -1,76 +1,89 @@
+button {
+	border: none;
+}
 body {
-	padding: 10px;
+	padding: 30px 10px 30px 10px;
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 18px;
-	color: #fff;
+	color: rgba(255, 255, 255, 0.8);
 	background-color: #3c3c3c;
 }
 h1 {
+	color: #fff;
 	text-align: center;
 	font-weight: 700;
-	font-size: 24px;
-	margin: 0px 0px 30px 0px;
-}
-h1 span {
-	border-bottom: 2px solid #fff;
-}
-.passBody {
-	padding: 30px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin: 0 auto;
-	max-width: 350px;
-	border: 2px solid orange;
-	border-radius: 5px;
-	box-shadow: inset 0px 0px 10px orange;
-}
-.passBody__menu {
-}
-.passBody__options {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-.passBody__options label {
-	margin: 0px 0px 8px 0px;
-}
-.passBody__options input,
-.passBody__options select {
+	font-size: 20px;
 	margin: 0px 0px 20px 0px;
 }
+
+.passBody {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin: 0 auto;
+	max-width: 320px;
+	border: 1px solid orange;
+	border-radius: 4px;
+	box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.4);
+}
+.passBody__options {
+	margin: 0px 0px 20px 0px;
+	border-radius: 4px;
+	box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.4);
+}
+.options {
+	padding: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	/* flex-direction: row-reverse; */
+	margin: 0px 0px 10px 0px;
+}
+.options label {
+	font-size: 12px;
+	text-transform: uppercase;
+	margin: 0px 20px 0px 0px;
+}
 .passBody__outBody {
+	width: 100%;
 	display: flex;
 	margin: 0px 0px 20px 0px;
 }
 .passBody__passOut {
+	flex: 1 0 auto;
 	padding: 10px 30px;
-	color: black;
+	color: rgba(0, 0, 0);
 	background-color: #fff;
 	border-radius: 5px;
 	text-align: center;
-	border: 2px solid black;
-	border-radius: 5px;
-	box-shadow: inset 0px 0px 5px black;
+	border: 1px solid black;
+	border-radius: 4px;
 }
 .passBody__btn {
-	width: 50%;
+	margin: 0px 0px 20px 0px;
+	width: 150px;
 	padding: 10px;
 	color: #fff;
 	background-color: #000;
-	border: 3px solid orange;
-	border-radius: 5px;
+	border-radius: 4px;
 	cursor: pointer;
+	box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.4);
 }
 .passBody__btn:hover {
-	background-color: orange;
-	border: 3px solid black;
+	background-color: rgba(255, 166, 0, 0.5);
+	transition: all 0.3s ease 0s;
+}
+.passBody__btn:active {
+	transform: scale(0.9);
 	transition: all 0.3s ease 0s;
 }
 .passBody__btn_copyTo {
 	flex: 0 0 auto;
-	margin: 0px 0px 0px 20px;
-	width: 35px;
-	/* height: 35px; */
-	background: url("../img/ftcopy.svg") center no-repeat;
+	margin: 0px 0px 0px 10px;
+	width: 40px;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-image: url("../img/ftcopy.svg");
 }
